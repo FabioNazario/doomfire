@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/doomfire.js"></script>
+  </head>
+  <body onload="run()">
+    <div id=fire>
+    </div>
+    <div>
+      <label>Flame Intensity</label><br>
+      <input type="range"  id="flameIntensityRange" min="0" max="35"  oninput="javascript:setFlameIntensity(this.value);"><br>
+      <label>Decay Intensity</label><br>
+      <input type="range"  id="decayIntensityRange" min="2" max="10" oninput="javascript:setDecayIntensity(this.value)"><br>
+      <label>Wind Power</label><br>
+      <input type="range"  id="windPowerRange" min="1" max="10"  oninput="javascript:setWindPowerIntensity(this.value)"><br>
+      <label>Delay</label><br>
+      <input type="range"  id="delayRange" min="10" max="200" oninput="javascript:setDelay(this.value)"><br> 
+      
+
+      <audio style="display:none;" id=flameAudio autoplay loop controls>
+          <source src="mp3/campfire.mp3" type="audio/ogg">
+          <source src="mp3/campfire.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+   
+      <!--<embed id="flameAudio"src="mp3/campfire.mp3" autostart="true" loop="true" volume="0" hidden="true">-->
+    </div>
+  </body>
+</html>
